@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ezculafiano Atta Hantoro | Network Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+    body{
+      background: linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+      color:#fff;
+      min-height:100vh;
+      overflow-x:hidden;
+    }
+
+    /* Glow Orbs */
+    .orb{
+      position:fixed;
+      width:300px;height:300px;
+      border-radius:50%;
+      filter: blur(80px);
+      opacity:.6;
+      z-index:-1;
+    }
+    .orb.blue{background:#00eaff;top:-80px;left:-80px}
+    .orb.pink{background:#ff4ecd;bottom:-80px;right:-80px}
+    .orb.purple{background:#7b61ff;top:40%;right:-120px}
+
+    header{
+      padding:40px 10%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+    .logo{
+      font-weight:700;
+      letter-spacing:2px;
+      background:linear-gradient(90deg,#00eaff,#ff4ecd,#7b61ff);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+    nav a{
+      margin-left:20px;
+      text-decoration:none;
+      color:#fff;
+      opacity:.85;
+      position:relative;
+    }
+    nav a::after{
+      content:"";
+      position:absolute;
+      left:0;bottom:-6px;
+      width:0;height:2px;
+      background:linear-gradient(90deg,#00eaff,#ff4ecd);
+      transition:.3s;
+    }
+    nav a:hover::after{width:100%}
+
+    .hero{
+      padding:80px 10%;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:center;
+    }
+    .hero h1{
+      font-size:50px;
+      line-height:1.2;
+    }
+    .hero span{
+      background:linear-gradient(90deg,#00eaff,#ff4ecd,#7b61ff);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+    .hero p{margin:20px 0;opacity:.9}
+
+    .btn{
+      display:inline-block;
+      padding:12px 30px;
+      border-radius:30px;
+      background:linear-gradient(90deg,#00eaff,#ff4ecd);
+      color:#0b1020;
+      text-decoration:none;
+      font-weight:600;
+      box-shadow:0 10px 30px rgba(255,78,205,.4);
+      transition:.3s;
+    }
+    .btn:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,234,255,.5)}
+
+    .card{
+      background:linear-gradient(135deg,rgba(255,255,255,.15),rgba(255,255,255,.03));
+      backdrop-filter: blur(12px);
+      border-radius:24px;
+      padding:30px;
+      box-shadow:0 30px 60px rgba(0,0,0,.4);
+      border:1px solid rgba(255,255,255,.15);
+    }
+
+    section{padding:70px 10%}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;
+    }
+    .item{
+      background:linear-gradient(135deg,rgba(0,234,255,.2),rgba(123,97,255,.15));
+      padding:22px;
+      border-radius:18px;
+      transition:.3s;
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .item:hover{
+      transform:translateY(-8px) scale(1.02);
+      background:linear-gradient(135deg,#00eaff,#ff4ecd);
+      color:#0b1020;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      opacity:.8;
+    }
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .hero h1{font-size:36px}
+    }
+  </style>
+</head>
+<body>
+  <div class="orb blue"></div>
+  <div class="orb pink"></div>
+  <div class="orb purple"></div>
+
+  <header>
+    <div class="logo">NET•ENGINEER</div>
+    <nav>
+      <a href="#about">Tentang</a>
+      <a href="#project">Projek</a>
+      <a href="#skill">Keahlian</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Ezculafiano <span>Atta Hantoro</span></h1>
+      <p>Siswa <b>XI TJKT</b> – Teknik Jaringan Komputer dan Telekomunikasi.  
+      Berfokus pada dunia jaringan, cyber security, dan teknologi masa depan.</p>
+      <a href="#about" class="btn">Lihat Profil</a>
+    </div>
+    <div class="card">
+      <h3>Identitas</h3>
+      <p>Nama : Ezculafiano Atta Hantoro</p>
+      <p>Kelas : XI TJKT</p>
+      <p>Bidang : Network Engineer</p>
+      <p>Fokus : Networking & Cyber Security</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 style="margin-bottom:20px;">Tentang Saya</h2>
+    <p style="max-width:700px;opacity:.9">
+      Saya adalah siswa TJKT yang tertarik pada dunia jaringan komputer, infrastruktur IT,
+      dan keamanan sistem. Saya terus mengembangkan kemampuan di bidang networking dan cyber security.
+    </p>
+  </section>
+
+  <section id="project">
+    <h2 style="margin-bottom:20px;">Projek & Pelatihan</h2>
+    <div class="grid">
+      <div class="item">Cyber Security</div>
+      <div class="item">Network Fundamental</div>
+      <div class="item">Pelatihan Jurusan TJKT</div>
+      <div class="item">Konfigurasi Jaringan</div>
+    </div>
+  </section>
+
+  <section id="skill">
+    <h2 style="margin-bottom:20px;">Keahlian</h2>
+    <div class="grid">
+      <div class="item">IP Addressing</div>
+      <div class="item">Topologi Jaringan</div>
+      <div class="item">Instalasi Kabel LAN</div>
+      <div class="item">HTML Dasar</div>
+      <div class="item">Troubleshooting Network</div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Ezculafiano Atta Hantoro • Network Engineer
+  </footer>
+</body>
+</html>
